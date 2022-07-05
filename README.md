@@ -15,7 +15,7 @@ Clone the repository
 
 Switch to the repo folder
 
-    cd rise-up-project
+    cd subscirption-manager
 
 Install all the dependencies using composer
 
