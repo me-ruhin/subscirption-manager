@@ -42,7 +42,13 @@ class User extends Authenticatable
 
     public $errors = [];
 
-
+    /**
+	 * It will store a new record to users table.
+     *
+	 * @param $data
+     *
+     *  @return \Illuminate\Http\Response
+	 */
     public function subscribe($data)
     {
         $subscriptionStatus = $this->hasAlreadySubcribe($data['email'],$data['website_id']);
@@ -68,6 +74,15 @@ class User extends Authenticatable
 
 
     }
+
+     /**
+	 * It will check is the user already subcribed or not
+     *
+	 * @param $email, $website_id
+     *
+     *  @return  Boolean||Object
+	 */
+
     public function hasAlreadySubcribe($email,$website_id){
         return User::where('email',$email)->where('website_id',$website_id)->first();
     }

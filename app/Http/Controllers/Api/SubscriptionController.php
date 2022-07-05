@@ -17,6 +17,13 @@ class SubscriptionController extends Controller
 
     }
 
+    /**
+	 * It will a new record as a subscriber to users table.
+     *
+	 * @param Request $request
+     *
+     * @return \Illuminate\Http\Response
+	 */
     public  function store(SubscriptionRequest $request)
     {
        $result =  $this->user->subscribe($request->all());

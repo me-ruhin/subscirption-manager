@@ -20,6 +20,13 @@ class Post extends Model
 
     public $errors = [];
 
+    /**
+	 * It will store the post.
+     *
+	 * @param $data
+     *
+     *  @return \Illuminate\Http\Response
+	 */
     public function store($data){
        try{
 

@@ -16,6 +16,14 @@ class PostController extends Controller
         $this->post = $postObj;
 
     }
+
+     /**
+	 * It will store the post.
+     *
+	 * @param Request $request
+     *
+     * @return \Illuminate\Http\Response
+	 */
     public function store(PostRequest $request){
 
         $result =  $this->post->store($request->all());
